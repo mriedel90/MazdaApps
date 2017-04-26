@@ -612,8 +612,8 @@ CustomApplicationsHandler.register("app.speedometer", new CustomApplication({
 	 */
 
 	setGPSHeading: function(heading) {
-		heading = heading >= 180 ? heading - 180 : heading + 180;
-		// 0 = North, 180 = Souths
+		heading += 150;  //offset for some reason
+		// 0 = North, 180 = South
 		this.gpsPanel.css({
 			transform: 'rotate(' + heading + 'deg)'
 		});
